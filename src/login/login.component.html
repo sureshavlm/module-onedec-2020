@@ -1,0 +1,26 @@
+
+
+<h1>{{ title }}</h1>
+
+Username: {{username}}<br/>
+
+Username: <input type="text" [ngModel]="username"><br/>
+Password: <input type="password"><br/>
+<button (click)="onLoginBtnClick()">Login</button>
+<button (click)="change()">Change</button>
+
+
+<table border="1" *ngIf="flag">
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+	</tr>
+	<tr *ngFor="let product of products">
+		<td>
+			{{ product.name }}
+		</td>
+		<td>
+			{{ product.price }}
+		</td>
+	</tr>
+</table>
